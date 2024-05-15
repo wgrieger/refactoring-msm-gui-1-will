@@ -64,12 +64,11 @@ class DirectorsController < ApplicationController
   end
 
   def min_dob
-    @eldest = Director.
-      all.
-      where.not({ :dob => nil }).
+    @eldest = Director.all.where.not({ :dob => nil }).
       order({ :dob => :asc }).
       at(0)
 
     render({ :template => "director_templates/eldest" })
   end
+
 end

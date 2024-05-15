@@ -14,6 +14,13 @@
   </a>
 </div>
 
+<div> 
+hello
+<%= @the_movie.director.class %>
+<%= @the_movie.director %>
+<%= @the_movie %>
+</div>
+
 <hr>
 
 <form action="/modify_movie/<%= @the_movie.id %>" method="post">
